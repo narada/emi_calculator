@@ -6,9 +6,8 @@ class HomeLoanController < ApplicationController
   end
 
   def calculator
-    p params
     result = HomeLoanServices::process(params[:amount].to_i, params[:tenure].to_i, params[:rate].to_f)
-    p result
+
     render json: {amount: result[:total], insurance: result[:insurance]}
   end
 

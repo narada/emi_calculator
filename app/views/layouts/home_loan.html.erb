@@ -1,52 +1,14 @@
 <% content_for :content do %>
 
-  <div class="container abc">
-
-
+  <div class="container bg-1">
     <div class="row h-100">
         <div class="col-sm-12" style="margin: 45px auto;">
-            <div class="card card-block w-75 mx-auto def">
-
+            <div class="card card-block w-75 mx-auto bg-2">
                   <%= yield %>
-
             </div>
         </div>
     </div>
-
   </div>
 <% end %>
 
 <%= render template: "layouts/application" %>
-
-<style media="screen">
-.abc{
-  background-image:
-    linear-gradient(to right, rgba(1, 97, 226, 0.8) 10%, rgba(2, 205, 154, 0.8) 100%),
-    url('https://doublevision.lk/wp-content/uploads/2020/01/photo-1560518883-ce09059eeffa-1-1215x800.jpg');
-  background-size: cover;
-  color: white;
-  border-radius: 10px;
-}
-
-.def {
-  border-radius: 20px;
-  opacity: 0.8;
-  background-color: #030a22;
-  font-family: Akile;
-  padding: 60px;
-}
-
-.def h1 {
-  font-size: 40px;
-  color: white;
-}
-
-.ghi {
-  font-size: 16px;
-  color: white;
-}
-
-#installment {
-  font-size: 14px;
-}
-</style>

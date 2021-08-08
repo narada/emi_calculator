@@ -36,7 +36,7 @@ Chart.controllers.RoundedDoughnut = Chart.controllers.doughnut.extend({
 });
 
 
-const displayChart = () => {
+function displayChart(){
 
 params = { amount: $('#l_amount').val(), tenure: $('#l_tenure').val(), rate: $('#l_rate').val() }
 var chartData = [0,0]
@@ -51,14 +51,15 @@ fetch('/home_loan/calculator', {
 }
 ).then(response => response.json())
 .then(data => {
-  console.log('Success:', data);
+
   chartData = [data['amount'], data['insurance']]
-    console.log('chartData', chartData);
+
     var emiCalcDom = document.getElementById("emi_calc");
     var emiCalcChart = new Chart(emiCalcDom, {
-        type: 'pie',
+        type: 'doughnut',
         options: {
-            cutoutPercentage: 60,
+            cutoutPercentage: 50,
+            responsive: true,
             legend: {
                 position: 'right',
                 labels: {
@@ -71,8 +72,8 @@ fetch('/home_loan/calculator', {
         },
         data: {
           labels: [
-                      "Home insurance",
                       "Mortage payment",
+                      "Home insurance",
                   ],
             datasets: [
                 {
@@ -83,8 +84,8 @@ fetch('/home_loan/calculator', {
                         "#02CD9A",
                     ],
                     backgroundColor: [
-                        'rgba(0, 38, 89, 0.22)',
-                        "rgba(01, 61, E2, 0.93)",
+                        '#0161E2',
+                        "#02CD9A",
                     ],
                     hoverBackgroundColor: [
                         '#0161E2',
@@ -97,10 +98,10 @@ fetch('/home_loan/calculator', {
 })
 .catch((error) => {
   console.error('Error:', error);
-});
-
-  }
-
-  $(function(){
-    displayChart();
   });
+
+}
+
+$(function(){
+  displayChart();
+});

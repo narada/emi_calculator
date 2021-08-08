@@ -1,3 +1,44 @@
 // Place all the styles related to the home_loan controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+body {
+  background: black;
+  color: white;
+  font-family: 'Merriweather', sans-serif;
+}
+.navbar {
+  margin-bottom: 0;
+  background: black;
+}
+
+.bg-1{
+  background-image:
+    linear-gradient(to right, rgba(1, 97, 226, 0.8) 10%, rgba(2, 205, 154, 0.8) 100%),
+    url('https://doublevision.lk/wp-content/uploads/2020/01/photo-1560518883-ce09059eeffa-1-1215x800.jpg');
+  background-size: cover;
+  color: white;
+  border-radius: 10px;
+}
+
+.bg-2 {
+  border-radius: 20px;
+  opacity: 0.8;
+  background-color: #030a22;
+  font-family: Akile;
+  padding: 60px 60px 60px 60px;
+}
+
+.def h1 {
+  font-size: 40px;
+  color: white;
+}
+
+.sub-headings {
+  font-size: 16px;
+  color: white;
+}
+
+#installment {
+  font-size: 14px;
+}
