@@ -1,2 +1,33 @@
-<h1>HomeLoan#index</h1>
-<p>Find me in app/views/home_loan/index.html.erb</p>
+<p id="notice"><%= notice %></p>
+
+<h1>HOME LOAN</h1>
+<h1>EMI CALCULATOR</h1>
+
+<br/>
+
+<div class="container">
+  <div class="row h-100">
+    <div class="col-sm-6">
+      <div class="row">
+        <div class="slider_1"><%= hidden_field_tag("l_amount", 10000000) %></div>
+        <span class="ghi">LOAN AMOUNT - (&#8377;)</span>
+      </div>
+      <div class="row">
+        <div class="slider_2"><%= hidden_field_tag("l_tenure", 72) %></div>
+        <span class="ghi">TENURE - (M)</span>
+      </div>
+      <div class="row">
+        <div class="slider_3"><%= hidden_field_tag("l_rate", 7.5) %></div>
+        <span class="ghi">INTEREST RATE - (%)</span>
+      </div>
+    </div>
+  <div class="col-sm-6">
+    <div class="position-relative">
+      <canvas id="emi_calc"></canvas>
+      <div class="position-absolute position-center text-center pt-5">
+        <div class="fw-bold text-uppercase mb-0"><sup>&#8377;</sup><span id="installment">0</span><sub>/month</sub></div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
