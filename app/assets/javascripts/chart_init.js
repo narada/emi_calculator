@@ -41,7 +41,7 @@ const displayChart = () => {
 params = { amount: $('#l_amount').val(), tenure: $('#l_tenure').val(), rate: $('#l_rate').val() }
 var chartData = [0,0]
 
-fetch('/home_loan/calc', {
+fetch('/home_loan/calculator', {
   method: 'POST',
   headers:  {
     "Content-Type": "application/json",
